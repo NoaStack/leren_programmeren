@@ -1,23 +1,23 @@
 import random
-
+from random import shuffle
 
 kleuren = ["harten", "klaveren", "schoppen", "ruiten"]
 kaart_nummer = ["2", "3", "4", "5", "6", "7", "8", "9", "10","boer","vrouw","heer","aas"]
 kaarten = []
 
+for _ in range(2):
+    kaarten.append("joker")
 
-while len(kaarten) != 52:
+while len(kaarten) != 54:
     y = random.choice(kleuren)+ ' ' + (random.choice(kaart_nummer))
     if y not in kaarten:
         kaarten.append(y)
 
-kaarten.append('joker2'), kaarten.append('joker1')
-
+random.shuffle(kaarten)
 
 for _ in range(1, 8):
-    random_kaart = random.choice(kaarten)
-    print(f"kaart {_}: {random_kaart}")
-    kaarten.remove(random_kaart)
+    print(f"kaart {_}: {kaarten[_]}")
+    kaarten.pop(_)
     
-print ()
+print()
 print(f"deck: {len(kaarten)} {kaarten}")
