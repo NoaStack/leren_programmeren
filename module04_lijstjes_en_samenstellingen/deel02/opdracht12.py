@@ -3,16 +3,18 @@ from fruitmand import fruitmand
 namen = []
 lengte = []
 
-for _ in fruitmand:
-    namen.append(_['name'])
+for i in fruitmand:
+    namen.append(i['name'])
     
 sheesh = namen.count(1)
     
-print(namen)
 
 for x in namen:
     lengte.append(len(x))
-    
-lengte.sort()
 
-print(f"naam ({lengte[0]} letters) heeft een "
+lengte.sort(reverse=True)
+
+
+for x in fruitmand:
+    if len(x['name']) == (lengte[0]):
+        print(f"De {x['name']} ({(lengte[0])} leters) heeft een {x['color']} kleur en een gewicht van {x['weight'] / 1000} kg")
