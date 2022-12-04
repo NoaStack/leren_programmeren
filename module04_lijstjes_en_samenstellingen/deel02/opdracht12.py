@@ -6,9 +6,6 @@ lengte = []
 for i in fruitmand:
     namen.append(i['name'])
     
-sheesh = namen.count(1)
-    
-
 for x in namen:
     lengte.append(len(x))
 

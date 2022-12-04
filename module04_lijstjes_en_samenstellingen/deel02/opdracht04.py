@@ -1,9 +1,9 @@
 from fruitmand import fruitmand
 import random
 
-sheesh = []
+naam = []
 vraag = input("Hoeveel ? ")
 for x in fruitmand:
-    sheesh.append(x['name'])
+    naam.append(x['name'])
 
-print(f"{random.choice(sheesh)} {vraag} ")
+print(f"{random.choice(naam)} {vraag} ")
