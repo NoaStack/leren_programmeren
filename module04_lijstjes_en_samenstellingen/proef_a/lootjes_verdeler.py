@@ -20,16 +20,14 @@ while True:
 
 
 getal = len(deelnemers) - 1
-getal_2 = abs(getal - len(deelnemers))
-
 for i in range(getal):
     while deelnemers[getal] == lootjes[getal]:
         random.shuffle(lootjes)
-    while deelnemers[getal_2] == lootjes[getal_2]:
-        random.shuffle(lootjes)
-        
-
+    for index, item in list(enumerate(deelnemers)):
+        while deelnemers[index] == lootjes[index]:
+            random.shuffle(lootjes)                      
 for x in range (len(deelnemers)):
-    print(f"{deelnemers[x]} heeft {lootjes[x]}")
+    if deelnemers[x] == lootjes[x]:
+        print(f"{deelnemers[x]} heeft {lootjes[x]}")
     
-    
+        
