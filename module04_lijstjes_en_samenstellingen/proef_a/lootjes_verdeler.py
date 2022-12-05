@@ -27,7 +27,6 @@ for i in range(getal):
         while deelnemers[index] == lootjes[index]:
             random.shuffle(lootjes)                      
 for x in range (len(deelnemers)):
-    if deelnemers[x] == lootjes[x]:
-        print(f"{deelnemers[x]} heeft {lootjes[x]}")
+    print(f"{deelnemers[x]} heeft {lootjes[x]}")
     
         
