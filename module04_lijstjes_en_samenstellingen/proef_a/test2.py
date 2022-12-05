@@ -1,40 +1,35 @@
 import random
 
-namen = []
-lot = []
-combinatie = []
 
-namen.append(input('Vul gebruiker in : '))
+deelnemers = []
+lootjes = []
+
 
 while True:
-    if input('wilt u nog meer gebruikers toevoegen? [y/n] : ').lower()  == 'y':
-        namen.append(input('Vul gebruiker in : '))
-    else:
+    naam = input("Welke naam\n>>> ")
+    if naam == "" and len(deelnemers) < 2:
+        print("Er moeten minimaal 3 namen zijn ")
+    elif naam == "" and len(deelnemers) > 2:
         break
-restart = True  
-while restart:
-    if len(namen) > 2:
-        lot = namen.copy()
-        random.shuffle(lot)
-        for x,naam in enumerate(namen):
-            if len(lot) == 1  and lot[0] == naam:
-                break
-            while True:
-                if lot[0] == naam:
-                    random.shuffle(lot)
-                else:
-                    combinatie.append(f'Naam : {naam} Lot : {lot[0]}')
-                    lot.pop(0)
-                    break
-        if len(lot) == 1 & len(naam) == 1:
-            restart = True
-            break
+    if naam != "":
+        if naam not in deelnemers:
+            deelnemers.append(naam)
+            lootjes.append(naam)
         else:
-            restart = False
+            print("Die naam is er al")
 
-    else:
-        print('je hebt niet genoeg vrienden (sad ;( )')
-        quit()
 
-for lijst in combinatie:
-    print(lijst)
+getal = len(deelnemers) - 1
+getal_2 = abs(getal - len(deelnemers))
+
+for i in range(getal):
+    while deelnemers[getal] == lootjes[getal]:
+        random.shuffle(lootjes)
+    while deelnemers[getal_2] == lootjes[getal_2]:
+        random.shuffle(lootjes)
+        
+
+for x in range (len(deelnemers)):
+    print(f"{deelnemers[x]} heeft {lootjes[x]}")
+    
+    

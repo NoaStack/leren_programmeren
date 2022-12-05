@@ -4,7 +4,6 @@ import random
 deelnemers = []
 lootjes = []
 
-
 while True:
     naam = input("Welke naam\n>>> ")
     if naam == "" and len(deelnemers) < 2:
@@ -17,14 +16,25 @@ while True:
             lootjes.append(naam)
         else:
             print("Die naam is er al")
+            
 
-for x in deelnemers:
-    random_naam = random.choice(lootjes)
-    while random_naam == x:
-        random_naam = random.choice(lootjes)
+
+for x in range(len(deelnemers)):
+    while deelnemers[x] == lootjes[x]:
+        random.shuffle(lootjes)
+    print(f"{deelnemers[x]} heeft {lootjes[x]}")
     
-    print(f"{x} heeft {random_naam}")
-    lootjes.remove(random_naam)
+
+# for x in deelnemers:
+#     print(teller)
+#     while deelnemers[teller] == lootjes[teller]:
+#         random.shuffle(lootjes)
+#     print(f"{x} heeft {lootjes[teller]}") 
+#     lootjes.pop(teller)
+    
+
+
+
 #Idee:
 # Pas printen als het niet gelijk is maar ? hoe
 # als lootje 2 zelfde is als naam 2, kies alweer tot het iets anders is
