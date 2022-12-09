@@ -23,7 +23,7 @@ if doelsaldo1 > doelsaldo2:
 else:
     land2_punten += 3
     
-    
+
 print(f"""
 Wedstrijd {groepA[0]} - {groepA[1]} eindigde in: {score[0]} - {score[1]}
 Overzicht groep A

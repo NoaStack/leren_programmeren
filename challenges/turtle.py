@@ -1,4 +1,2 @@
-import turtle
-import random
 
-turtle.done()
+a = abs(2 -

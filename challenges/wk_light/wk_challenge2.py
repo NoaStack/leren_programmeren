@@ -1,6 +1,6 @@
-    from tabulate import tabulate
+from tabulate import tabulate
 
-    data = {"Groep":[]}
+    data = [[]]
 
 
     Vraag_groep = input("Welke groep wil je? 1/tm 8")
