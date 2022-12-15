@@ -16,7 +16,7 @@ n2 = False
 keuze = False
 
 while eerste_ronde:
-    print("""
+    print("""       
 Wat wilt u doen?
 A) getallen optellen
 B) getallen aftrekken
@@ -97,6 +97,11 @@ I) niets""")
                 n1 = float(input("Welk getal? "))
             except:
                 print("Typ een nummer in")
+    elif keuze == "f":
+        som = subtraction
+        reken = "-"
+        n2 = 1
+        print("Getallen verminderen")
     print(f"{n1} {reken} {n2} = {som(number1=n1, number2=n2)}")
     print("--------------------------------------------------")
     print(f"Wat wilt u doen met de uitkomst ({som(number1=n1, number2=n2)})")
