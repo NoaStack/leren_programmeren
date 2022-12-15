@@ -10,6 +10,44 @@ def multiplication(number1, number2):
 def division(number1, number2):
     return number1 / number2
 
+def choice():
+    return("""
+Wat wilt u doen?
+A) getallen optellen
+B) getallen aftrekken
+C) getallen vermenigvuldigen
+D) getallen delen
+E) getallen ophogen
+F) getallen verlagen
+G) getallen verdubbelen
+H) getallen halveren
+I) niets
+Kies: 
+""")
+    
+def nummer():
+    return("""
+Getallen optellen
+welk getal?""")
+
+
+def invoer():
+    return input()
+
+
+while invoer() != "I":
+    print(choice())
+    invoer()
+    if invoer == "a":
+        print(nummer())
+        
+        
+    
+
+    
+    
+
+
 
 
 
