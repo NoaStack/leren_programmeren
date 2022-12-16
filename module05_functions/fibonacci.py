@@ -1,10 +1,11 @@
-def fibonacci(nmr):
-    if nmr <= 1:
-        return nmr
-    else:
-        return(fibonacci(nmr-1)) + fibonacci((nmr-2))
 
-teller = 10
+def fibonaci(hoeveel):
+    nummers = 0,1
+    if hoeveel in nummers:
+        return hoeveel
+    return fibonaci(hoeveel - 1) + fibonaci(hoeveel - 2)
+    
+        
 
-for i in range(teller):
-    print(fibonacci(i))
+for x in range(10):
+    print(fibonaci(x))
