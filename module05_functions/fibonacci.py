@@ -1,4 +1,4 @@
-def fibonacci(hoeveel):
+def fibonacci(hoeveel:int):
     n1, n2 = 0, 1
     teller = 0
     while teller < hoeveel:

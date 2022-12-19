@@ -3,7 +3,7 @@ leeftijden = []
 a = 0
 vraag = True
 
-def namen_leeftijden():
+def namen_leeftijden(l):
     global vraag
     naam = input("Voer een naam in:\nOf voer stop in om te stoppen:\n>>> ")
     if naam == "stop":

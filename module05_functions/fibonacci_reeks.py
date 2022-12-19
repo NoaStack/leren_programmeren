@@ -1,4 +1,4 @@
-def fibonacci(nmr):
+def fibonacci(nmr:int):
     if nmr <= 1:
         return nmr
     else:
@@ -8,3 +8,4 @@ teller = 10
 
 for i in range(teller):
     print(fibonacci(nmr=i))
+    
