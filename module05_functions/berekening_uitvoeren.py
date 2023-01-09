@@ -52,7 +52,10 @@ while eerste_ronde:
         reken = "+"
         print("Getallen optellen")
         while n1 == False:
-            n1 =
+            try:
+                n1 = float(input("Welk getal? "))
+            except:
+                print("Typ een nummer")
         while n2 == False:
             try:
                 n2 = float(input(f"Welk getal optellen bij {n1}? "))
