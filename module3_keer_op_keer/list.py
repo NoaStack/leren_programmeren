@@ -1,0 +1,10 @@
+a = [5, 12 ,19 , 27 ,3]
+a.insert(1, 25)
+print(a)
+print(len(a))
+a.remove(12)
+print(a)
+a.pop(0)
+print(a)
+a.insert(0, 36)
+print(a)
